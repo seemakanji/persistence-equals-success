@@ -1,8 +1,8 @@
 "use client";
 import { useState } from "react";
 
-const IMAGE_URL = "/assets/seema-headshot-1200x1600.jpg"; // We'll upload this image next
-const MAILING_LIST_ACTION = "#"; // Replace later with your newsletter form action
+const IMAGE_URL = "/assets/seema-headshot-1200x1600.jpg";
+const MAILING_LIST_ACTION = "#"; // replace later with your real form action
 
 export default function Page() {
   return (
@@ -97,7 +97,7 @@ function AboutBook() {
         <h2 className="text-3xl font-bold">About the Book</h2>
         <p className="mt-4 text-slate-700 leading-relaxed">
           <em>Persistence Equals Success (My Journey to Motherhood)</em> traces Seema Kanji’s path
-          from a strict upbringing in Canada, where expectations of an arranged marriage felt
+          from a strict Indian upbringing in Canada, where expectations of an arranged marriage felt
           inescapable, to forging her own future through education and the law. Disowned in 1992 for
           refusing a preselected marriage, Seema worked at a bank, studied for the LSAT, and earned
           admission to both UVic and UBC—ultimately attending UBC Law School in 1998. What followed
@@ -106,7 +106,7 @@ function AboutBook() {
           India, and again in 2018 with the adoption of her son from a Casablanca orphanage.
         </p>
         <div className="mt-8 grid md:grid-cols-3 gap-6">
-          <InfoCard title="Category" body="Memoir · Women’s Stories · Immigration & Family · Reproductive Journeys" />
+          <InfoCard title="Category" body="Memoir · Women’s Stories · Persistence Family · Reproductive Journeys" />
           <InfoCard title="Ideal Readers" body="Mothers by IVF, adoption, or surrogacy; South Asian diaspora; resilience seekers; women in law and business." />
           <InfoCard title="Status" body="Manuscript in progress. Sign up for updates, early chapters, and launch events." />
         </div>
@@ -128,12 +128,12 @@ function Timeline() {
   const events = [
     { year: "Childhood", text: "Raised in a strict home; witnessed domestic violence; expected to accept an arranged marriage." },
     { year: "1992", text: "Disowned for choosing independence after university instead of an arranged marriage." },
-    { year: "1998", text: "Began studies at UBC Law after working at a bank and preparing for the LSAT; also admitted to UVic." },
+    { year: "1998", text: "Began studies at UBC Law after working at a bank and preparing for the LSAT." },
     { year: "2006", text: "Married; began a long season of fertility treatments and dashed hopes." },
     { year: "2013–2014", text: "Surrogacy in Anand, India; daughter Ayana born January 2014." },
-    { year: "2015", text: "Second surrogacy attempt ends in miscarriage in June." },
+    { year: "2015", text: "Second surrogacy attempt ends in miscarriage in June 2015." },
     { year: "2017", text: "Decide as a family to grow no further—only to receive an unexpected call months later." },
-    { year: "2018", text: "Travel to Morocco; adopt Soufiane from Casablanca and bring him home in July." },
+    { year: "2018", text: "Travel to Morocco; adopt Soufiane from an orphanage in Casablanca and bring him home in July 2018." },
   ];
   return (
     <section id="timeline" className="scroll-mt-16 bg-white/70">
@@ -246,7 +246,9 @@ function ContactCard({ title, body }) {
     <div className="rounded-2xl bg-white p-6 ring-1 ring-slate-200 shadow-sm">
       <h3 className="font-semibold">{title}</h3>
       <p className="mt-2 text-slate-700 text-sm">{body}</p>
-      <a href="mailto:hello@example.com" className="mt-4 inline-block text-rose-700 hover:underline">Email Seema</a>
+      <a href="mailto:hello@example.com" className="mt-4 inline-block text-rose-700 hover:underline">
+        Email Seema
+      </a>
     </div>
   );
 }
