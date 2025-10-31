@@ -1,3 +1,4 @@
+import "./globals.css";
 export const metadata = {
   title: "Persistence Equals Success — Seema Kanji",
   description: "A memoir of resilience, law, and two paths to motherhood — surrogacy and adoption.",
