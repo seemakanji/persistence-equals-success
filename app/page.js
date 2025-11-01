@@ -77,11 +77,15 @@ function Hero() {
           </div>
         </div>
         <div className="relative">
-          <div className="aspect-[3/4] w-full max-w-md mx-auto rounded-3xl overflow-hidden shadow-2xl ring-1 ring-slate-200">
-            <img
-              src={IMAGE_URL}
-              alt="Author headshot of Seema Kanji"
-              className="h-full w-full object-cover scale-50"
+<div className="flex justify-center">
+  <div className="w-48 h-48 md:w-56 md:h-56 rounded-full overflow-hidden shadow-xl ring-2 ring-rose-200">
+    <img
+      src={IMAGE_URL}
+      alt="Author headshot of Seema Kanji"
+      className="h-full w-full object-cover scale-105"
+    />
+  </div>
+</div>
             />
           </div>
         </div>
