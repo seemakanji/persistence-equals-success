@@ -81,7 +81,7 @@ function Hero() {
             <img
               src={IMAGE_URL}
               alt="Author headshot of Seema Kanji"
-              className="h-full w-full object-cover"
+              className="h-full w-full object-cover scale-95"
             />
           </div>
         </div>
@@ -245,7 +245,7 @@ function ContactCard({ title, body }) {
     <div className="rounded-2xl bg-white p-6 ring-1 ring-slate-200 shadow-sm">
       <h3 className="font-semibold">{title}</h3>
       <p className="mt-2 text-slate-700 text-sm">{body}</p>
-      <a href="mailto:hello@example.com" className="mt-4 inline-block text-rose-700 hover:underline">
+      <a href="mailto:seema@persistencesuccess.com" className="mt-4 inline-block text-rose-700 hover:underline">
         Email Seema
       </a>
     </div>
