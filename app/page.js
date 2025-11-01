@@ -81,7 +81,7 @@ function Hero() {
             <img
               src={IMAGE_URL}
               alt="Author headshot of Seema Kanji"
-              className="h-full w-full object-cover scale-65"
+              className="h-full w-full object-cover scale-50"
             />
           </div>
         </div>
