@@ -101,7 +101,7 @@ function AboutBook() {
           inescapable, to forging her own future through education and the law. Disowned in 1992 for
           refusing an arranged marriage, Seema worked at a bank, studied for the LSAT, and earned
           admission to both UVic and UBC—ultimately attending UBC Law School in 1998. What followed
-          was an eight-year struggle with infertility, four failed IVF cycles, and finally success through
+          was marriage then an eight-year struggle with infertility, four failed IVF cycles, and finally success through
           surrogacy and adoption when joy arrived in 2014 with the birth of her daughter in Anand,
           India, and again in 2018 with the adoption of her son from a Casablanca orphanage.
         </p>
@@ -130,10 +130,10 @@ function Timeline() {
     { year: "1992", text: "Disowned for choosing independence after university instead of an arranged marriage." },
     { year: "1998", text: "Began studies at UBC Law after working at a bank and preparing for the LSAT." },
     { year: "2006", text: "Married; began a long season of fertility treatments and dashed hopes." },
-    { year: "2013–2014", text: "Surrogacy in Anand, India; daughter Ayana born January 2014." },
+    { year: "2013–2014", text: "Surrogacy in Anand, India; daughter Ayana born in 2014." },
     { year: "2015", text: "Second surrogacy attempt ends in miscarriage in June 2015." },
     { year: "2017", text: "Decide as a family to grow no further—only to receive an unexpected call months later." },
-    { year: "2018", text: "Travel to Morocco; adopt Soufiane from Casablanca and bring him home in July." },
+    { year: "2018", text: "Travel to Morocco; adopt Soufiane from Casablanca and bring him home in July 2018." },
   ];
   return (
     <section id="timeline" className="scroll-mt-16 bg-white/70">
@@ -167,8 +167,7 @@ function Author() {
           </p>
           <div className="mt-6 grid grid-cols-2 gap-4">
             <Fact label="Profession" value="Lawyer · Insurance Agent · Author" />
-            <Fact label="Education" value="UBC Law (1998)" />
-            <Fact label="Family" value="Husband, daughter Ayana (2014), son Soufiane (adopted 2018)" />
+            <Fact label="Education" value="UBC Law (2001)" />
             <Fact label="Location" value="Vancouver, Canada" />
           </div>
         </div>
