@@ -6,7 +6,7 @@ const MAILING_LIST_ACTION = "#"; // replace later with your newsletter form acti
 
 export default function Page() {
   return (
-    <div className="min-h-screen bg-gradient-to-b from-rose-50 via-white to-sky-50 text-slate-800">
+    <div className="min-h-screen bg-gradient-to-b from-rose-50 via-white to-sky-50 text-slate-800 text-[1.05rem] leading-relaxed">
       <Nav />
       <Hero />
       <AboutBook />
