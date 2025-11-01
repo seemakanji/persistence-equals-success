@@ -82,7 +82,7 @@ function Hero() {
     <img
       src={IMAGE_URL}
       alt="Author headshot of Seema Kanji"
-      className="h-full w-full object-cover scale-105"
+      className="h-full w-full object-cover"
     />
   </div>
 </div>
@@ -176,8 +176,12 @@ function Author() {
           </div>
         </div>
         <div className="md:order-first">
-          <div className="aspect-[3/4] rounded-3xl overflow-hidden shadow-xl ring-1 ring-slate-200">
-            <img src={IMAGE_URL} alt="Seema Kanji headshot" className="h-full w-full object-cover" />
+          <div className="w-44 h-44 md:w-56 md:h-56 rounded-full overflow-hidden shadow-xl ring-2 ring-rose-200 mx-auto">
+            <img 
+              src={IMAGE_URL} 
+              alt="Seema Kanji headshot" 
+              className="h-full w-full object-cover" 
+            />
           </div>
         </div>
       </div>
