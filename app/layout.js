@@ -1,12 +1,12 @@
-export default function Page() {
+export const metadata = {
+  title: "Persistence Equals Success — Seema Kanji",
+  description: "A memoir website",
+};
+
+export default function RootLayout({ children }) {
   return (
-    <main style={{ padding: "4rem", fontFamily: "sans-serif" }}>
-      <h1>Persistence Equals Success</h1>
-      <h2>My Journey to Motherhood</h2>
-      <p>
-        Welcome to the official website for Seema Kanji’s memoir,
-        <em> Persistence Equals Success (My Journey to Motherhood)</em>.
-      </p>
-    </main>
+    <html lang="en">
+      <body>{children}</body>
+    </html>
   );
 }
