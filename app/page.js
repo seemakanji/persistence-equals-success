@@ -1,6 +1,6 @@
 "use client";
-import { useState } from "react";
-import { motion } from "framer-motion";
+import { useState, useEffect } from "react";
+import { motion, MotionConfig } from "framer-motion";
 
 
 const IMAGE_URL = "/assets/seema-headshot-1200x1600.jpg";
@@ -98,6 +98,8 @@ function Hero() {
   );
 }
 function CoverReveal() {
+  const [mounted, setMounted] = useState(false);
+  useEffect(() => setMounted(true), []);
   return (
     <section className="scroll-mt-16">
       <div className="mx-auto max-w-6xl px-4 py-12 grid md:grid-cols-2 items-center gap-10">
@@ -129,18 +131,21 @@ function CoverReveal() {
         </div>
 
         {/* Cover image */}
-        <div className="order-1 md:order-2 flex justify-center">
-          <motion.img
-            src={COVER_URL}
-            alt="Persistence Equals Success book cover"
-            className="w-64 md:w-72 lg:w-80 h-auto rounded-xl shadow-2xl ring-1 ring-slate-200 object-contain bg-white"
-            initial={{ opacity: 0, y: 24 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, ease: "easeOut" }}
-          />
-        </div>
-      </div>
-    </section>
+          <div className="order-1 md:order-2 flex justify-center">
+  <MotionConfig reducedMotion="never">
+    {mounted && (
+      <motion.img
+        key="cover-v1" // forces a fresh mount
+        src={COVER_URL}
+        alt="Persistence Equals Success book cover"
+        className="w-64 md:w-72 lg:w-80 h-auto rounded-xl shadow-2xl ring-1 ring-slate-200 object-contain bg-white"
+        initial={{ opacity: 0, y: 28 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.9, ease: "easeOut" }}
+        />
+      )}
+    </MotionConfig>
+  </div>
   );
 }
 
