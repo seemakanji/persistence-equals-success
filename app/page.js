@@ -142,13 +142,14 @@ function AboutBook() {
       <div className="mx-auto max-w-6xl px-4 py-16">
         <h2 className="text-3xl font-bold">About the Book</h2>
         <p className="mt-4 text-slate-700 leading-relaxed">
-          <em>Persistence Equals Success (My Journey to Motherhood)</em> traces Seema’s path
-          from a strict Indian upbringing in Canada, where expectations of an arranged marriage felt
-          inescapable, to forging her own future through education and the law. Disowned in 1992 for
-          refusing an arranged marriage, Seema worked at a bank, studied for the LSAT, and earned
-          admission to both the University of Victoria and the University of British Columbia—ultimately attending UBC Law School in 1998. What followed
-          was marriage to a wonderful man and an eight-year struggle with infertility, after four failed IVF cycles, and finally success through surrogacy and adoption—when joy arrived in 2014 with the birth of her daughter in Anand,
-          India, and again in 2018 with the adoption of her son from an orphange in Casablanca.
+          <em>Persistence Equals Success (My Journey to Motherhood)</em> is a candid and courageous memoir about breaking barriers, 
+          defying expectations, and refusing to give up. Seema’s story begins in a traditional Indian household in Canada, where 
+          girls were expected to marry young and education was discouraged. But her drive to chart her own course led her through 
+          academic achievement, legal training, and ultimately, a life built on her own terms. This book explores the emotional 
+          terrain of infertility, the complexities of international surrogacy, and the transformative experience of adoption. 
+          Through heartbreak, hope, and hard-won triumphs, Seema shares how persistence became her greatest strength — not just 
+          in building a career, but in becoming a mother.  For anyone facing adversity, questioning tradition, or searching for 
+          inspiration, this memoir offers a powerful reminder: resilience isn’t just a trait — it’s a choice.
         </p>
         <div className="mt-8 grid md:grid-cols-3 gap-6">
           <InfoCard title="Category" body="Memoir · Women’s Stories · Immigration & Family · Reproductive Journeys" />
