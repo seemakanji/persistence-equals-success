@@ -93,6 +93,7 @@ function Hero() {
     </section>
   );
 }
+
 function CoverReveal() {
   return (
     <section className="scroll-mt-16">
@@ -107,19 +108,20 @@ function CoverReveal() {
             Sign up below to get launch updates, early chapters, and event invites.
           </p>
         </div>
-        <div className="order-1 md:order-2">
-          <div className="mx-auto w-64 md:w-72 lg:w-80 aspect-[2/3] rounded-xl overflow-hidden shadow-2xl ring-1 ring-slate-200 bg-white">
-            <img
-              src={COVER_URL}
-              alt="Persistence Equals Success book cover"
-              className="h-full w-full object-cover"
-            />
-          </div>
+
+        {/* Scaled, rounded cover image */}
+        <div className="order-1 md:order-2 flex justify-center">
+          <img
+            src={COVER_URL}
+            alt="Persistence Equals Success book cover"
+            className="w-64 md:w-72 lg:w-80 h-auto rounded-xl shadow-2xl ring-1 ring-slate-200 object-contain bg-white"
+          />
         </div>
       </div>
     </section>
   );
 }
+
 
 function AboutBook() {
   return (
