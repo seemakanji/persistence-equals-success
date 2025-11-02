@@ -2,7 +2,7 @@
 import { useState } from "react";
 
 const IMAGE_URL = "/assets/seema-headshot-1200x1600.jpg";
-const COVER_URL = "/assets/book-cover-v1.png";
+const COVER_URL = "/assets/book-cover-v1.jpg";
 const PREORDER_LINK =
   "mailto:seema@persistencesuccess.com?subject=Preorder%20Persistence%20Equals%20Success&body=Hi%20Seema,%0D%0AI%27d%20like%20to%20preorder%20your%20book.%20Please%20add%20me%20to%20the%20list%20and%20send%20details.%0D%0AThank%20you!";
 
