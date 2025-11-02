@@ -173,13 +173,13 @@ function InfoCard({ title, body }) {
 function Timeline() {
   const events = [
     { year: "Childhood", text: "Raised in a strict Indian home; witnessed domestic violence; expected to accept an arranged marriage." },
-    { year: "1992", text: "Disowned for choosing independence after university instead of an arranged marriage." },
+    { year: "1992", text: "Disowned for choosing independence during university instead of an arranged marriage." },
     { year: "1998", text: "Began studies at UBC Law after working at a bank and preparing for the LSAT." },
     { year: "2006", text: "Married; began a long season of fertility treatments and dashed hopes." },
     { year: "2013–2014", text: "Surrogacy in Anand, India; daughter Ayana born January 2014." },
     { year: "2015", text: "Second surrogacy attempt ends in miscarriage in June 2015." },
-    { year: "2017", text: "Decide to be a one child family—only to receive an unexpected call months later." },
-    { year: "2018", text: "Travel to Morocco; adopt Soufiane from Casablanca and bring him home in July 2018." },
+    { year: "2017", text: "Decided to be a one child family—only to receive an unexpected call months later." },
+    { year: "2018", text: "Traveled to Morocco; adopted son Soufiane from Casablanca and brought him home in July 2018." },
   ];
   return (
     <section id="timeline" className="scroll-mt-16 bg-white/70">
