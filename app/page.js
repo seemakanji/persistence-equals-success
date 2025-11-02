@@ -114,14 +114,14 @@ function CoverReveal() {
         {/* Scaled, rounded cover image */}
         <div className="order-1 md:order-2 flex justify-center">
           <motion.img
-  src={COVER_URL}
-  alt="Persistence Equals Success book cover"
-  className="w-64 md:w-72 lg:w-80 h-auto rounded-xl shadow-2xl ring-1 ring-slate-200 object-contain bg-white"
-  initial={{ opacity: 0, y: 40 }}
-  whileInView={{ opacity: 1, y: 0 }}
-  transition={{ duration: 1, ease: "easeOut" }}
-  viewport={{ once: true }}
-/>
+            src={COVER_URL}
+            alt="Persistence Equals Success book cover"
+            className="w-64 md:w-72 lg:w-80 h-auto rounded-xl shadow-2xl ring-1 ring-slate-200 object-contain bg-white"
+            initial={{ opacity: 0, y: 40 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1, ease: "easeOut" }}
+            viewport={{ once: true }}
+          />
 
           />
         </div>
