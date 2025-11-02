@@ -1,5 +1,7 @@
 "use client";
 import { useState } from "react";
+import { motion } from "framer-motion";
+
 
 const IMAGE_URL = "/assets/seema-headshot-1200x1600.jpg";
 const MAILING_LIST_ACTION = "#"; // replace later with your newsletter form action
@@ -111,10 +113,16 @@ function CoverReveal() {
 
         {/* Scaled, rounded cover image */}
         <div className="order-1 md:order-2 flex justify-center">
-          <img
-            src={COVER_URL}
-            alt="Persistence Equals Success book cover"
-            className="w-64 md:w-72 lg:w-80 h-auto rounded-xl shadow-2xl ring-1 ring-slate-200 object-contain bg-white"
+          <motion.img
+  src={COVER_URL}
+  alt="Persistence Equals Success book cover"
+  className="w-64 md:w-72 lg:w-80 h-auto rounded-xl shadow-2xl ring-1 ring-slate-200 object-contain bg-white"
+  initial={{ opacity: 0, y: 40 }}
+  whileInView={{ opacity: 1, y: 0 }}
+  transition={{ duration: 1, ease: "easeOut" }}
+  viewport={{ once: true }}
+/>
+
           />
         </div>
       </div>
