@@ -213,7 +213,7 @@ function Author() {
           </p>
           <div className="mt-6 grid grid-cols-2 gap-4">
             <Fact label="Profession" value="Lawyer · Insurance Agent · Author" />
-            <Fact label="Education" value="UBC Law (2001)" />
+            <Fact label="Education" value="BA (1992) · CSC (2000) · LL.B (2001) · CAIB 2010" />
             <Fact label="Location" value="Vancouver, Canada" />
           </div>
         </div>
