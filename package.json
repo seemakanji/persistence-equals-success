@@ -10,7 +10,7 @@
     "next": "14.2.4",
     "react": "18.3.1",
     "react-dom": "18.3.1"
-    "framer-motion": "^11.0.0",
+    "framer-motion": "^11.0.0"
   },
   "devDependencies": {
     "autoprefixer": "^10.4.20",
@@ -18,4 +18,5 @@
     "tailwindcss": "^3.4.13"
   }
 }
+
 
