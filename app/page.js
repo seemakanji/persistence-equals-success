@@ -99,8 +99,10 @@ function CoverReveal() {
         <div className="order-2 md:order-1">
           <h2 className="text-3xl font-bold">Cover Reveal</h2>
           <p className="mt-4 text-slate-700">
-            Here’s the first look at the memoir cover for <em>Persistence Equals Success (My Journey to Motherhood)</em>.
-            This artwork mirrors the heart of the book: a mother and child silhouette rising from challenges, through resilince and persistence, into hope.
+            Presenting the cover of <em>Persistence Equals Success (My Journey to Motherhood)</em>.
+            A visual embodiment of the memoir's core message.  The silhouette of a mother and child symbolizes the ascent
+            from adversity to triumph, guided by resilience, determination, and hope.  This artwork reflects the spirit of the book:
+            a journey defined by unwavering persistence and the transformative power of love.
           </p>
           <p className="mt-3 text-slate-700">
             Sign up below to get launch updates, early chapters, and event invites.
