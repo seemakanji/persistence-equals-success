@@ -123,6 +123,7 @@ function CoverReveal() {
 }
 
 
+
 function AboutBook() {
   return (
     <section id="about" className="scroll-mt-16">
