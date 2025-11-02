@@ -25,7 +25,7 @@ function Nav() {
     <header className="sticky top-0 z-50 backdrop-blur bg-white/70 border-b border-slate-200">
       <div className="mx-auto max-w-6xl px-4 py-3 flex items-center justify-between">
         <a href="#top" className="font-semibold text-lg tracking-tight">
-          Persistence = Success
+          Persistence Equals Success
         </a>
         <button
           className="md:hidden rounded-xl px-3 py-2 border border-slate-300 shadow-sm"
@@ -109,7 +109,7 @@ function AboutBook() {
         </p>
         <div className="mt-8 grid md:grid-cols-3 gap-6">
           <InfoCard title="Category" body="Memoir · Women’s Stories · Immigration & Family · Reproductive Journeys" />
-          <InfoCard title="Ideal Readers" body="Mothers by IVF, adoption, or surrogacy; South Asian diaspora; resilience seekers; women in law and business." />
+          <InfoCard title="Ideal Readers" body="Mothers by IVF, adoption, or surrogacy; infertile couples; resilience seekers; women in law and business." />
           <InfoCard title="Status" body="Manuscript in progress. Sign up for updates, early chapters, and launch events." />
         </div>
       </div>
@@ -130,12 +130,12 @@ function Timeline() {
   const events = [
     { year: "Childhood", text: "Raised in a strict home; witnessed persistent domestic violence; expected to accept an arranged marriage." },
     { year: "1992", text: "Disowned for choosing independence after university instead of an arranged marriage." },
-    { year: "1998", text: "Began studies at UBC Law after working at a bank and preparing for the LSAT; also admitted to UVic." },
+    { year: "1998", text: "Began studies at UBC Law after working at a bank and preparing for the LSAT." },
     { year: "2006", text: "Married; began a long season of fertility treatments and dashed hopes." },
     { year: "2013–2014", text: "Surrogacy in Anand, India; daughter Ayana born January 2014." },
     { year: "2015", text: "Second surrogacy attempt ends in miscarriage in June 2015." },
     { year: "2017", text: "Decide as a family to grow no further—only to receive an unexpected call months later." },
-    { year: "2018", text: "Travel to Morocco; adopt Soufiane from Casablanca and bring him home in July, 2018." },
+    { year: "2018", text: "Travel to Morocco; adopt Soufiane from Casablanca and bring him home in July 2018." },
   ];
   return (
     <section id="timeline" className="scroll-mt-16 bg-white/70">
