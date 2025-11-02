@@ -132,23 +132,20 @@ function CoverReveal() {
 
         {/* Cover image */}
           <div className="order-1 md:order-2 flex justify-center">
-  <MotionConfig reducedMotion="never">
-    {mounted && (
-      <motion.img
-        key="cover-v1" // forces a fresh mount
-        src={COVER_URL}
-        alt="Persistence Equals Success book cover"
-        className="w-64 md:w-72 lg:w-80 h-auto rounded-xl shadow-2xl ring-1 ring-slate-200 object-contain bg-white"
-        initial={{ opacity: 0, y: 28 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.9, ease: "easeOut" }}
-        />
-      )}
-    </MotionConfig>
-  </div>
-  );
-}
-
+            <MotionConfig reducedMotion="never">
+              {mounted && (
+                <motion.img
+                  key="cover-v1" // forces a fresh mount
+                  src={COVER_URL}
+                  alt="Persistence Equals Success book cover"
+                  className="w-64 md:w-72 lg:w-80 h-auto rounded-xl shadow-2xl ring-1 ring-slate-200 object-contain bg-white"
+                  initial={{ opacity: 0, y: 28 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.9, ease: "easeOut" }}
+                />
+              )}
+            </MotionConfig>
+          </div>
 
 function AboutBook() {
   return (
