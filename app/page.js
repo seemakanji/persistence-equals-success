@@ -122,8 +122,6 @@ function CoverReveal() {
             transition={{ duration: 1, ease: "easeOut" }}
             viewport={{ once: true }}
           />
-
-          />
         </div>
       </div>
     </section>
