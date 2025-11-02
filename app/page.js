@@ -4,6 +4,7 @@ import { useState } from "react";
 const IMAGE_URL = "/assets/seema-headshot-1200x1600.jpg";
 const MAILING_LIST_ACTION = "#"; // replace later with your newsletter form action
 const COVER_URL = "/assets/book-cover-v1.jpg";
+const SHOW_PRAISE = false;
 
 
 export default function Page() {
@@ -15,7 +16,7 @@ export default function Page() {
       <AboutBook />
       <Timeline />
       <Author />
-      <Praise />
+      {SHOW_PRAISE && <Praise />}
       <CTA />
       <Footer />
     </div>
@@ -41,7 +42,6 @@ function Nav() {
           <a className="hover:text-rose-600" href="#about">About</a>
           <a className="hover:text-rose-600" href="#timeline">Journey</a>
           <a className="hover:text-rose-600" href="#author">Author</a>
-          <a className="hover:text-rose-600" href="#praise">Praise</a>
           <a className="hover:text-rose-600" href="#contact">Contact</a>
         </nav>
       </div>
@@ -51,7 +51,6 @@ function Nav() {
             <a className="hover:text-rose-600" href="#about" onClick={() => setOpen(false)}>About</a>
             <a className="hover:text-rose-600" href="#timeline" onClick={() => setOpen(false)}>Journey</a>
             <a className="hover:text-rose-600" href="#author" onClick={() => setOpen(false)}>Author</a>
-            <a className="hover:text-rose-600" href="#praise" onClick={() => setOpen(false)}>Praise</a>
             <a className="hover:text-rose-600" href="#contact" onClick={() => setOpen(false)}>Contact</a>
           </div>
         </div>
