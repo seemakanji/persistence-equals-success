@@ -1,15 +1,10 @@
 "use client";
-import { useState, useEffect } from "react";
-import { motion, MotionConfig } from "framer-motion";
-
+import { useState } from "react";
 
 const IMAGE_URL = "/assets/seema-headshot-1200x1600.jpg";
-const MAILING_LIST_ACTION = "#"; // replace later with your newsletter form action
-const COVER_URL = "/assets/book-cover-v1.jpg";
-const SHOW_PRAISE = false;
-const PREORDER_LINK = "mailto:seema@persistencesuccess.com?subject=Preorder%20Persistence%20Equals%20Success&body=Hi%20Seema,%0D%0AI%27d%20like%20to%20preorder%20your%20book.%20Please%20add%20me%20to%20the%20list%20and%20send%20details.%0D%0AThank%20you!";
-
-
+const COVER_URL = "/assets/book-cover-v1.png";
+const PREORDER_LINK =
+  "mailto:seema@persistencesuccess.com?subject=Preorder%20Persistence%20Equals%20Success&body=Hi%20Seema,%0D%0AI%27d%20like%20to%20preorder%20your%20book.%20Please%20add%20me%20to%20the%20list%20and%20send%20details.%0D%0AThank%20you!";
 
 export default function Page() {
   return (
@@ -20,7 +15,6 @@ export default function Page() {
       <AboutBook />
       <Timeline />
       <Author />
-      {SHOW_PRAISE && <Praise />}
       <CTA />
       <Footer />
     </div>
@@ -74,8 +68,8 @@ function Hero() {
           </h1>
           <p className="mt-2 text-lg text-slate-600 italic">My Journey to Motherhood</p>
           <p className="mt-6 text-slate-700">
-            A courageous memoir about resisting expectations, choosing education and autonomy,
-            and the long road through infertility, surrogacy and adoption, to a family formed by love through persistence and strength.
+            A courageous memoir about resisting familial expectations, choosing education and autonomy,
+            and the long road through infertility, surrogacy, and adoption to a family formed with love through persistence and strength.
           </p>
           <div className="mt-8 flex flex-wrap gap-3">
             <a href="#about" className="rounded-2xl bg-rose-600 text-white px-5 py-3 shadow-md hover:shadow-lg">Read about the book</a>
@@ -83,13 +77,13 @@ function Hero() {
           </div>
         </div>
 
-        {/* ROUND PORTRAIT */}
+        {/* Round portrait */}
         <div className="flex justify-center">
           <div className="w-48 h-48 md:w-56 md:h-56 rounded-full overflow-hidden shadow-xl ring-2 ring-rose-200">
             <img
               src={IMAGE_URL}
               alt="Author headshot of Seema Kanji"
-              className="h-full w-full object-cover"
+              className="h-full w-full object-cover fade-in-up"
             />
           </div>
         </div>
@@ -97,9 +91,8 @@ function Hero() {
     </section>
   );
 }
+
 function CoverReveal() {
-  const [mounted, setMounted] = useState(false);
-  useEffect(() => setMounted(true), []);
   return (
     <section className="scroll-mt-16">
       <div className="mx-auto max-w-6xl px-4 py-12 grid md:grid-cols-2 items-center gap-10">
@@ -107,13 +100,11 @@ function CoverReveal() {
           <h2 className="text-3xl font-bold">Cover Reveal</h2>
           <p className="mt-4 text-slate-700">
             Here’s the first look at the memoir cover for <em>Persistence Equals Success (My Journey to Motherhood)</em>.
-            This artwork mirrors the heart of the book: a mother and child silhouette rising from challenges into hope.
+            This artwork mirrors the heart of the book: a mother and child silhouette rising from challenges, through resilince and persistence, into hope.
           </p>
           <p className="mt-3 text-slate-700">
             Sign up below to get launch updates, early chapters, and event invites.
           </p>
-
-          {/* CTA buttons */}
           <div className="mt-6 flex flex-wrap gap-3">
             <a
               href={PREORDER_LINK}
@@ -130,24 +121,18 @@ function CoverReveal() {
           </div>
         </div>
 
-        {/* Cover image */}
-          <div className="order-1 md:order-2 flex justify-center">
-            <MotionConfig reducedMotion="never">
-              {mounted && (
-                <motion.img
-                  key="cover-v1" // forces a fresh mount
-                  src={COVER_URL}
-                  alt="Persistence Equals Success book cover"
-                  className="w-64 md:w-72 lg:w-80 h-auto rounded-xl shadow-2xl ring-1 ring-slate-200 object-contain bg-white"
-                  initial={{ opacity: 0, y: 28 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.9, ease: "easeOut" }}
-                />
-              )}
-            </MotionConfig>
-          </div>
-        );
-      }
+        {/* Book cover (smaller, with fade) */}
+        <div className="order-1 md:order-2 flex justify-center">
+          <img
+            src={COVER_URL}
+            alt="Persistence Equals Success book cover"
+            className="w-64 md:w-72 lg:w-80 h-auto rounded-xl shadow-2xl ring-1 ring-slate-200 object-contain bg-white fade-in-up"
+          />
+        </div>
+      </div>
+    </section>
+  );
+}
 
 function AboutBook() {
   return (
@@ -155,14 +140,13 @@ function AboutBook() {
       <div className="mx-auto max-w-6xl px-4 py-16">
         <h2 className="text-3xl font-bold">About the Book</h2>
         <p className="mt-4 text-slate-700 leading-relaxed">
-          <em>Persistence Equals Success (My Journey to Motherhood)</em> traces Seema Kanji’s path
+          <em>Persistence Equals Success (My Journey to Motherhood)</em> traces Seema’s path
           from a strict Indian upbringing in Canada, where expectations of an arranged marriage felt
           inescapable, to forging her own future through education and the law. Disowned in 1992 for
           refusing an arranged marriage, Seema worked at a bank, studied for the LSAT, and earned
-          admission to both UVic and UBC—ultimately attending UBC Law School in 1998. What followed
-          was marriage to a wonderful man then an eight-year struggle with infertility, four failed IVF cycles, and finally success through
-          surrogacy and adoption—until joy arrived in 2014 with the birth of her daughter in Anand,
-          India, and again in 2018 with the adoption of her son from a Casablanca orphanage.
+          admission to both the University of Victoria and the University of British Columbia—ultimately attending UBC Law School in 1998. What followed
+          was marriage to a wonderful man and an eight-year struggle with infertility, after four failed IVF cycles, and finally success through surrogacy and adoption—when joy arrived in 2014 with the birth of her daughter in Anand,
+          India, and again in 2018 with the adoption of her son from an orphange in Casablanca.
         </p>
         <div className="mt-8 grid md:grid-cols-3 gap-6">
           <InfoCard title="Category" body="Memoir · Women’s Stories · Immigration & Family · Reproductive Journeys" />
@@ -185,13 +169,13 @@ function InfoCard({ title, body }) {
 
 function Timeline() {
   const events = [
-    { year: "Childhood", text: "Raised in a strict home; witnessed persistent domestic violence; expected to accept an arranged marriage." },
+    { year: "Childhood", text: "Raised in a strict Indian home; witnessed domestic violence; expected to accept an arranged marriage." },
     { year: "1992", text: "Disowned for choosing independence after university instead of an arranged marriage." },
     { year: "1998", text: "Began studies at UBC Law after working at a bank and preparing for the LSAT." },
     { year: "2006", text: "Married; began a long season of fertility treatments and dashed hopes." },
     { year: "2013–2014", text: "Surrogacy in Anand, India; daughter Ayana born January 2014." },
     { year: "2015", text: "Second surrogacy attempt ends in miscarriage in June 2015." },
-    { year: "2017", text: "Decide as a family to grow no further—only to receive an unexpected call months later." },
+    { year: "2017", text: "Decide to be a one child family—only to receive an unexpected call months later." },
     { year: "2018", text: "Travel to Morocco; adopt Soufiane from Casablanca and bring him home in July 2018." },
   ];
   return (
@@ -219,25 +203,26 @@ function Author() {
         <div>
           <h2 className="text-3xl font-bold">About Seema Kanji</h2>
           <p className="mt-4 leading-relaxed text-slate-700">
-            Seema is a lawyer, licensed insurance agent, and now author based in Vancouver, Canada. She brings legal
-            rigor and deep empathy to her storytelling, illuminating how persistence—through cultural
-            pressure, infertility, international surrogacy, and foreign adoption—shaped a resilient family and a
-            purposeful career.
+            Seema is the General Counsel for InsureLine Brokers Inc., a licensed insurance agent, and a debut author based in Canada. 
+            Her debut book, "Persistence Equals Success", chronicles a deeply personal journey through infertility, international surrogacy, 
+            and adoption — a path marked by courage, cultural complexity, and unwavering determination. With a storyteller’s heart and a 
+            lawyer’s clarity, Seema transforms adversity into insight, offering readers a powerful reminder that resilience can shape not 
+            only families, but futures. Her writing is a testament to the belief that persistence isn’t just a trait — it’s a way forward.
           </p>
           <div className="mt-6 grid grid-cols-2 gap-4">
             <Fact label="Profession" value="Lawyer · Insurance Agent · Author" />
             <Fact label="Education" value="UBC Law (2001)" />
-            <Fact label="Location" value="Canada" />
+            <Fact label="Location" value="Vancouver, Canada" />
           </div>
         </div>
 
-        {/* ROUND PORTRAIT IN AUTHOR SECTION */}
+        {/* Round portrait in author section */}
         <div className="md:order-first">
           <div className="w-44 h-44 md:w-56 md:h-56 rounded-full overflow-hidden shadow-xl ring-2 ring-rose-200 mx-auto">
             <img
               src={IMAGE_URL}
               alt="Seema Kanji headshot"
-              className="h-full w-full object-cover"
+              className="h-full w-full object-cover fade-in-up"
             />
           </div>
         </div>
@@ -255,24 +240,6 @@ function Fact({ label, value }) {
   );
 }
 
-function Praise() {
-  return (
-    <section id="praise" className="scroll-mt-16 bg-gradient-to-r from-rose-50 to-sky-50">
-      <div className="mx-auto max-w-6xl px-4 py-16">
-        <h2 className="text-3xl font-bold">Advance Praise (coming soon)</h2>
-        <div className="mt-6 grid md:grid-cols-3 gap-6">
-          {[1, 2, 3].map((i) => (
-            <blockquote key={i} className="rounded-2xl bg-white p-6 shadow-sm ring-1 ring-slate-200">
-              <p className="text-slate-700">“Add your early reader or media quote here.”</p>
-              <footer className="mt-3 text-sm text-slate-500">— Name, Title</footer>
-            </blockquote>
-          ))}
-        </div>
-      </div>
-    </section>
-  );
-}
-
 function CTA() {
   return (
     <section id="contact" className="scroll-mt-16">
@@ -281,7 +248,7 @@ function CTA() {
         <p className="mt-3 text-slate-700">Join Seema’s list for chapter previews, behind-the-scenes notes, and events.</p>
         <form
           className="mt-8 grid sm:grid-cols-[1fr_auto] gap-3 justify-center"
-          action={MAILING_LIST_ACTION}
+          action="#"
           method="post"
         >
           <input
@@ -336,3 +303,6 @@ function Footer() {
     </footer>
   );
 }
+
+    
+ 
