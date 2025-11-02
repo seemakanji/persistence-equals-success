@@ -69,23 +69,21 @@ function Hero() {
           <p className="mt-2 text-lg text-slate-600 italic">My Journey to Motherhood</p>
           <p className="mt-6 text-slate-700">
             A courageous memoir about resisting expectations, choosing education and autonomy,
-            and the long road through infertility, surrogacy, and adoption to a family formed by love through persistence.
+            and the long road through infertility, surrogacy and adoption, to a family formed by love through persistence and strength.
           </p>
           <div className="mt-8 flex flex-wrap gap-3">
             <a href="#about" className="rounded-2xl bg-rose-600 text-white px-5 py-3 shadow-md hover:shadow-lg">Read about the book</a>
             <a href="#contact" className="rounded-2xl border border-rose-600 px-5 py-3 text-rose-700 hover:bg-rose-50">Join the list</a>
           </div>
         </div>
-        <div className="relative">
-<div className="flex justify-center">
-  <div className="w-48 h-48 md:w-56 md:h-56 rounded-full overflow-hidden shadow-xl ring-2 ring-rose-200">
-    <img
-      src={IMAGE_URL}
-      alt="Author headshot of Seema Kanji"
-      className="h-full w-full object-cover"
-    />
-  </div>
-</div>
+
+        {/* ROUND PORTRAIT */}
+        <div className="flex justify-center">
+          <div className="w-48 h-48 md:w-56 md:h-56 rounded-full overflow-hidden shadow-xl ring-2 ring-rose-200">
+            <img
+              src={IMAGE_URL}
+              alt="Author headshot of Seema Kanji"
+              className="h-full w-full object-cover"
             />
           </div>
         </div>
@@ -101,12 +99,12 @@ function AboutBook() {
         <h2 className="text-3xl font-bold">About the Book</h2>
         <p className="mt-4 text-slate-700 leading-relaxed">
           <em>Persistence Equals Success (My Journey to Motherhood)</em> traces Seema Kanji’s path
-          from a strict upbringing in Canada, where expectations of an arranged marriage felt
+          from a strict Indian upbringing in Canada, where expectations of an arranged marriage felt
           inescapable, to forging her own future through education and the law. Disowned in 1992 for
           refusing an arranged marriage, Seema worked at a bank, studied for the LSAT, and earned
           admission to both UVic and UBC—ultimately attending UBC Law School in 1998. What followed
-          was marriage then an eight-year struggle with infertility, four failed IVF cycles, and finally success through
-          surrogacy and adoption when joy arrived in 2014 with the birth of her daughter in Anand,
+          was marriage to a wonderful man then an eight-year struggle with infertility, four failed IVF cycles, and finally success through
+          surrogacy and adoption—until joy arrived in 2014 with the birth of her daughter in Anand,
           India, and again in 2018 with the adoption of her son from a Casablanca orphanage.
         </p>
         <div className="mt-8 grid md:grid-cols-3 gap-6">
@@ -130,14 +128,14 @@ function InfoCard({ title, body }) {
 
 function Timeline() {
   const events = [
-    { year: "Childhood", text: "Raised in a strict Indian home; witnessed domestic violence; expected to accept an arranged marriage." },
+    { year: "Childhood", text: "Raised in a strict home; witnessed persistent domestic violence; expected to accept an arranged marriage." },
     { year: "1992", text: "Disowned for choosing independence after university instead of an arranged marriage." },
-    { year: "1998", text: "Began studies at UBC Law after working at a bank and preparing for the LSAT." },
+    { year: "1998", text: "Began studies at UBC Law after working at a bank and preparing for the LSAT; also admitted to UVic." },
     { year: "2006", text: "Married; began a long season of fertility treatments and dashed hopes." },
-    { year: "2013–2014", text: "Surrogacy in Anand, India; daughter Ayana born in 2014." },
+    { year: "2013–2014", text: "Surrogacy in Anand, India; daughter Ayana born January 2014." },
     { year: "2015", text: "Second surrogacy attempt ends in miscarriage in June 2015." },
     { year: "2017", text: "Decide as a family to grow no further—only to receive an unexpected call months later." },
-    { year: "2018", text: "Travel to Morocco; adopt Soufiane from Casablanca and bring him home in July 2018." },
+    { year: "2018", text: "Travel to Morocco; adopt Soufiane from Casablanca and bring him home in July, 2018." },
   ];
   return (
     <section id="timeline" className="scroll-mt-16 bg-white/70">
@@ -172,15 +170,17 @@ function Author() {
           <div className="mt-6 grid grid-cols-2 gap-4">
             <Fact label="Profession" value="Lawyer · Insurance Agent · Author" />
             <Fact label="Education" value="UBC Law (2001)" />
-            <Fact label="Location" value="Vancouver, Canada" />
+            <Fact label="Location" value="Canada" />
           </div>
         </div>
+
+        {/* ROUND PORTRAIT IN AUTHOR SECTION */}
         <div className="md:order-first">
           <div className="w-44 h-44 md:w-56 md:h-56 rounded-full overflow-hidden shadow-xl ring-2 ring-rose-200 mx-auto">
-            <img 
-              src={IMAGE_URL} 
-              alt="Seema Kanji headshot" 
-              className="h-full w-full object-cover" 
+            <img
+              src={IMAGE_URL}
+              alt="Seema Kanji headshot"
+              className="h-full w-full object-cover"
             />
           </div>
         </div>
