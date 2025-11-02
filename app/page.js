@@ -146,6 +146,8 @@ function CoverReveal() {
               )}
             </MotionConfig>
           </div>
+        );
+      }
 
 function AboutBook() {
   return (
