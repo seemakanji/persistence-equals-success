@@ -7,6 +7,8 @@ const IMAGE_URL = "/assets/seema-headshot-1200x1600.jpg";
 const MAILING_LIST_ACTION = "#"; // replace later with your newsletter form action
 const COVER_URL = "/assets/book-cover-v1.jpg";
 const SHOW_PRAISE = false;
+const PREORDER_LINK = "mailto:seema@persistencesuccess.com?subject=Preorder%20Persistence%20Equals%20Success&body=Hi%20Seema,%0D%0AI%27d%20like%20to%20preorder%20your%20book.%20Please%20add%20me%20to%20the%20list%20and%20send%20details.%0D%0AThank%20you!";
+
 
 
 export default function Page() {
@@ -95,7 +97,6 @@ function Hero() {
     </section>
   );
 }
-
 function CoverReveal() {
   return (
     <section className="scroll-mt-16">
@@ -109,24 +110,36 @@ function CoverReveal() {
           <p className="mt-3 text-slate-700">
             Sign up below to get launch updates, early chapters, and event invites.
           </p>
+
+          {/* CTA buttons */}
+          <div className="mt-6 flex flex-wrap gap-3">
+            <a
+              href={PREORDER_LINK}
+              className="inline-flex items-center justify-center rounded-2xl bg-rose-600 text-white px-6 py-3 font-medium shadow-md hover:shadow-lg"
+            >
+              Preorder / Notify Me
+            </a>
+            <a
+              href="#about"
+              className="inline-flex items-center justify-center rounded-2xl border border-rose-600 px-6 py-3 text-rose-700 hover:bg-rose-50"
+            >
+              Learn about the book
+            </a>
+          </div>
         </div>
 
-        {/* Scaled, rounded cover image */}
+        {/* Cover image */}
         <div className="order-1 md:order-2 flex justify-center">
-          <motion.img
+          <img
             src={COVER_URL}
             alt="Persistence Equals Success book cover"
             className="w-64 md:w-72 lg:w-80 h-auto rounded-xl shadow-2xl ring-1 ring-slate-200 object-contain bg-white"
-            initial={{ opacity: 0, y: 24 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, ease: "easeOut" }}
           />
         </div>
       </div>
     </section>
   );
 }
-
 
 
 function AboutBook() {
