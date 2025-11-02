@@ -3,12 +3,15 @@ import { useState } from "react";
 
 const IMAGE_URL = "/assets/seema-headshot-1200x1600.jpg";
 const MAILING_LIST_ACTION = "#"; // replace later with your newsletter form action
+const COVER_URL = "/assets/book-cover-v1.jpg";
+
 
 export default function Page() {
   return (
     <div className="min-h-screen bg-gradient-to-b from-rose-50 via-white to-sky-50 text-slate-800 text-[1.05rem] leading-relaxed">
       <Nav />
       <Hero />
+      <CoverReveal />
       <AboutBook />
       <Timeline />
       <Author />
@@ -83,6 +86,33 @@ function Hero() {
             <img
               src={IMAGE_URL}
               alt="Author headshot of Seema Kanji"
+              className="h-full w-full object-cover"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}
+function CoverReveal() {
+  return (
+    <section className="scroll-mt-16">
+      <div className="mx-auto max-w-6xl px-4 py-12 grid md:grid-cols-2 items-center gap-10">
+        <div className="order-2 md:order-1">
+          <h2 className="text-3xl font-bold">Cover Reveal</h2>
+          <p className="mt-4 text-slate-700">
+            Here’s the first look at the memoir cover for <em>Persistence Equals Success (My Journey to Motherhood)</em>.
+            This artwork mirrors the heart of the book: a mother and child silhouette rising from challenges into hope.
+          </p>
+          <p className="mt-3 text-slate-700">
+            Sign up below to get launch updates, early chapters, and event invites.
+          </p>
+        </div>
+        <div className="order-1 md:order-2">
+          <div className="mx-auto w-64 md:w-72 lg:w-80 aspect-[2/3] rounded-xl overflow-hidden shadow-2xl ring-1 ring-slate-200 bg-white">
+            <img
+              src={COVER_URL}
+              alt="Persistence Equals Success book cover"
               className="h-full w-full object-cover"
             />
           </div>
